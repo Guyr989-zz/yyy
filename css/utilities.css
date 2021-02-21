@@ -1,0 +1,564 @@
+/* reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    direction: rtl;
+
+    position: relative;
+
+    height: 100%;
+    /* font-size: 62.5%; */
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-size: 16px;
+    color: #262626;
+    outline: none;
+    resize: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul {
+    list-style: none;
+    /* IE */
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0;
+}
+
+/* align text */
+.text-center {
+    text-align: center;
+}
+
+/* COLORS */
+
+/*bg colors */
+.bg-dark {
+    background-color: #262626;
+}
+
+.bg-grey {
+    background-color: #c8c8c8;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-light {
+    background-color: #f2f2f2;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+
+.bg-blue {
+    background-color: #6ad7fd;
+}
+
+
+/* text colors */
+.text-blue {
+    color: #6bd7fd;
+}
+
+.text-dark {
+    color: #262626;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-error {
+    color: #e02020;
+}
+
+/* disabled text */
+.text-disabled,
+.text-grey {
+    color: #848484;
+}
+
+/* border color */
+.border-light-grey {
+    border-color: #a3a3a3;
+}
+
+/* HELPER CLASSES */
+
+/* DISPLAY */
+.hidden,
+.mobile-link,
+.show-768,
+.show-1280 {
+    display: none !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.block-only {
+    display: block;
+}
+
+.block {
+    display: block;
+    width: 100%;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+
+/* position */
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.onTop {
+    z-index: 9999;
+}
+
+/* absolute positioning */
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.absolute-horizontal-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* container flex alignment */
+.flex-container {
+    display: flex;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+/* flex column */
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-min-768 {
+    flex-direction: row;
+}
+
+
+
+/* align vertical */
+.flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+
+/*align horizontal */
+.flex-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.space-between {
+    justify-content: space-between;
+}
+
+.flex-container-space-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+/* margin */
+.margin-auto {
+    margin: auto;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+/* padding */
+.p-0 {
+    padding: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+/* GRADIENTS */
+.gradient-top-bottom-black {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+}
+
+
+/* DIRECTIONS (rtl/ltr) */
+.rtl,
+.direction-he {
+    direction: rtl;
+}
+
+.direction-en {
+    direction: ltr;
+}
+
+/* MARGIN */
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+}
+
+.mr-0 {
+    margin-right: 0 !important;
+}
+
+
+/* TEXT */
+/* *.medium-title contains margin do to it's use */
+/* *.medium-text-title --- DOES NOT --- contain margin and has different line-height */
+/* to override margin - use margin classes or override in page css */
+.hero-title {
+    margin: 5.729vw 4.531vw 5.104vw 0;
+
+    font-size: 64px;
+    line-height: 24px;
+}
+
+.medium-title {
+    font-size: 40px;
+    line-height: 24px;
+
+    margin: 3.646vw 4.531vw 20px 0;
+}
+
+.medium-text-title {
+    font-size: 40px;
+    line-height: 44px;
+}
+
+
+.underline-thin {
+    border-bottom: 1px solid;
+}
+
+.medium-text,
+.small-title {
+    margin-bottom: 17px;
+
+    font-size: 20px !important;
+    line-height: 24px;
+}
+
+
+
+.no-border {
+    border: 0;
+}
+
+.border-grey {
+    border: 1px solid #262626;
+}
+
+/* cursor */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* GENERAL FIXES */
+
+/* makes element unselectable */
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+/* fixed font-size inside span for en word */
+.en-span-font-size-fix {
+    font-size: 31px;
+
+    text-transform: uppercase;
+}
+
+/* page fix */
+.page-bottom-padding {
+    padding-bottom: 100px;
+}
+
+/* header fix */
+.header-padding-fix {
+    padding-top: 99px;
+}
+
+/* js fix */
+body.nav-isOpen {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* MEDIA QUERIS */
+
+
+
+/* laptop/tablet */
+@media(max-width:1280px) {
+    .show-1280 {
+        display: block !important;
+    }
+
+}
+
+/* tablet-large */
+@media(max-width:1024px) {
+    :focus {
+        outline: 0;
+    }
+
+    /* DISPLAY 1024 */
+    .show-1024 {
+        display: block !important;
+    }
+}
+
+/* tablet-small/medium */
+@media(max-width:991px) {
+
+    /* DISPLAY 991 */
+    .show-991 {
+        display: block !important;
+    }
+
+    /* flex 991 */
+    .flex-column-991 {
+        flex-direction: column;
+    }
+
+    .flex-reverse-column-991 {
+        flex-direction: column-reverse;
+    }
+}
+
+@media(max-width:768px) {
+
+    /* DISPLAY 768 */
+    .show-768 {
+        display: block !important;
+    }
+
+    .show-768.flex {
+        display: flex !important;
+    }
+
+    .hide-768 {
+        display: none !important;
+    }
+
+    .block-768 {
+        display: block;
+    }
+
+    /* general style fix 768 */
+    .header-padding-fix {
+        padding-top: 62px;
+    }
+
+    .page-bottom-padding {
+        padding-bottom: 56px;
+    }
+
+    /* gradient 768 */
+    /* gradient may change in different media size */
+    .gradient-top-bottom-black {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.76));
+    }
+
+
+
+    /* titles 768 */
+    .hero-title {
+        margin: 6vw 4.531vw 6vw;
+
+        font-size: 42px;
+        line-height: 46px;
+    }
+
+    .medium-title {
+        margin: 52px 4.531vw 26px;
+        font-size: 20px;
+    }
+
+    .medium-text-title {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+
+
+    /* flex 768 */
+    .flex-column-768 {
+        flex-direction: column;
+    }
+
+    .flex-align-center-768 {
+        align-items: center;
+    }
+
+    .flex-align-start-768 {
+        align-items: flex-start;
+    }
+
+    /* fixed font-size inside span for en word 768 */
+    .en-span-font-size-fix {
+        font-size: 16px;
+    }
+
+    /* COLORS 768 */
+
+    /* background colors 768 (mobile) */
+    /* bg color may change in mobile */
+    .bg-light-mobile {
+        background-color: #f2f2f2;
+    }
+
+    .bg-dark-mobile {
+        background-color: #262626;
+    }
+
+    .bg-light-mobile {
+        background-color: #f2f2f2;
+    }
+
+    .bg-blue-mobile {
+        background-color: #6ad7fd;
+    }
+
+
+    /*text colors 768 (mobile) */
+    /* text color may change in mobile */
+    .text-blue-768 {
+        color: #6bd7fd;
+    }
+
+    .text-dark-768 {
+        color: #262626;
+    }
+
+    .text-white-768 {
+        color: #fff;
+    }
+
+}
+
+/* MOBILE SMALL*/
+@media(max-width:425px) {
+
+    .hero-title {
+        margin: 13.333vw 4.531vw 12vw 0;
+
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    /* TITLES 425 */
+    .small-title {
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

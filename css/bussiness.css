@@ -1,0 +1,93 @@
+
+body { background-color: #262626; color: #fff; }
+main { display: flex; flex-direction: row; max-width: 1900px; margin: auto }
+a { color: #6bd7fd }
+.form_side { width: 330px; background-color: #262626; height: calc(100vh - 60px); overflow-y: auto; position: relative; position: fixed; left: 0px; z-index: 0; top: 60px; box-shadow: 0 0 26px 0 #000000; }
+.form_side.z-1 { z-index: 1 }
+.form_side h2 { width: 100%; text-align: right; font-size: 34px; padding-top: 10%; padding-bottom: 20px; padding-right: 10%; font-family: newAlfiBold }
+.form_side h2 span { font-size: 20px; display: block; padding-top: 16px; font-family: newAlfi }
+
+.top_side { width: calc(100% - 330px); min-height: 600px; padding-top: 60px }
+.top_side .solutions { display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 100px; width: 95% }
+.top_side .solutions > div { width: 21%; height: auto; margin: 0 30px 0 0; padding: 20px 0.5% 0px 0.5%; border-radius: 2px; box-shadow: 0 4px 34px 5px rgba(0, 0, 0, 0.96); background-color: #262626; }
+.top_side .solutions .img img { width: 100% }
+.top_side .solutions .text { padding-top: 20px; line-height: 20px; padding-bottom: 12px }
+.top_side .solutions h3 { font-size: 1.8vw; padding: 0px 0; height: 7vw; font-weight: bold; font-family: newAlfiBold; margin-bottom: 14px }
+.top_side h2 { width: 100%; text-align: center; font-size: 24px; padding: 20px 0 40px 0; font-family: newAlfiBold }
+.top_side h2 a { text-decoration: underline }
+.top_side .info { display: flex; margin: auto; width: 80%; margin: 6vw auto 3vh auto; }
+.top_side .info > div { padding: 10px 3%; line-height: 24px; width: 50% }
+.top_side .info > div img { width: 100% }
+.top_side .info .text_info span { color: #6bd7fd; font-family: newAlfiBold }
+.top_side .info .logo_bussiness h1 { font-size: 24px; font-weight: bold; font-family: fbalfi-boldwebfont; }
+.top_side .advantages { display: flex; flex-wrap: wrap; width: 86%; margin: 30px auto 0 auto; padding-bottom: 100px; justify-content: center; }
+.top_side .advantages > div { text-align: center; width: 33%; margin-bottom: 50px }
+.top_side .advantages h3 { font-size: 16px; font-weight: normal; line-height: 20px }
+.top_side .advantages span { display: block; padding: 10px 0 0 0; font-weight: bold; font-family: newAlfiBold }
+.top_side .advantages span.desktop-only { font-weight: normal; font-family: newAlfi }
+.top_side .advantages img { width: 50px }
+.faq { background-color: #1a1919; width: 100%; padding: 40px }
+.faq h2 { padding-bottom: 26px; font-size: 34px; }
+.faq .faq_flex { display: flex; margin: auto; justify-content: center; flex-direction: column; width: 56%; }
+.faq .faq_flex > div { width: 100%; margin: 0px 0 14px 0; padding: 10px 30px; border-radius: 2px; background-color: #262626; border-radius: 2px; }
+.faq .faq_flex .ans { height: auto; display: none; line-height: 20px; }
+.faq .faq_flex .ask { display: block; line-height: 38px; color: #fff; position: relative }
+.faq .faq_flex .ask:before { content: "+"; position: absolute; right: -14px; display: flex; height: 100%; align-items: center; color: #fff; top: -2px; font-size: 19px; }
+.faq .faq_flex .open .ans { display: block; padding-top: 6px }
+.faq .faq_flex .open .ask { color: #6bd7fd }
+.faq .faq_flex .open .ask:before { content: "-"; }
+
+@media (min-width: 768px) {
+ .mobile-only { display: none !important }
+}
+
+@media (max-width: 1380px) {
+ .top_side .info { margin: 2.5vw auto 0vh auto }
+ .top_side .solutions h3 { margin-bottom: 0px }
+ .top_side .solutions .text { padding-top: 10px }
+ .top_side .solutions > div { padding-top: 6px }
+ .top_side .info .logo_bussiness h1 { font-size: 1.5vw }
+}
+
+@media (max-width: 1280px) {
+ .top_side .solutions > div { width: 40%; padding: 20px 1% 0px 1%; margin: 0px 0 30px 0 }
+ .top_side .solutions h3 { line-height: 2.4vw; font-size: 2.8vw; }
+}
+
+
+@media (max-width: 768px) {
+ .desktop-only { display: none !important }
+ .join_it { display: none; opacity: 0; font-weight: bold; width: 100%; height: 0px; margin: 0px 0 0px 0; background-color: #6bd7fd; display: flex; align-items: center; justify-content: center; align-content: center; color: #000; }
+ .join_it.fix_pos { position: fixed; z-index: 1; bottom: 0px; height: 60px; opacity: 1 }
+ .click_to_call { border-radius: 2px; border: solid 1px #6bd7fd; width: 100%; display: flex; justify-content: center; line-height: 48px; margin-bottom: 10px; }
+ .click_to_call img { align-self: center; margin-left: 7px; width: 20px }
+ .form_side { width: auto; height: unset }
+ .top_side { width: auto; }
+ .top_side .info { margin: 0px; flex-direction: column; width: 100% }
+ .top_side .info img { width: 100%; margin: auto; display: table; padding: 40px 0px 10px 0; }
+ .top_side .solutions { flex-wrap: wrap }
+ .top_side .info .logo_bussiness h1 { font-size: 7vw; line-height: 7vw }
+ .top_side .solutions .text { padding-top: 10px; padding-bottom: 0px }
+ .top_side .info > div { padding: 0px; width: 90%; margin: auto }
+ .top_side h2 { padding: 0px; width: 90%; margin: 30px auto 10px auto; text-align: right; font-size: 6.8vw; font-weight: normal; }
+ .top_side h2.h2_1 { font-family: newAlfi }
+ .lnk_lead { font-size: 16px !important; margin: 10px auto 30px auto !important; font-weight: bold !important; }
+ main { flex-direction: column }
+ .top_side .advantages { flex-wrap: wrap; padding-bottom: 0px; padding-top: 30px; margin-top: 0px }
+ .top_side .advantages > div { width: 50%; padding: 10px; margin-bottom: 26px }
+ .top_side .advantages img { width: 30px }
+ .top_side .solutions { width: 90%; margin: auto }
+ .top_side .solutions > div { margin: 12px auto; height: auto; padding: 14px; width: auto }
+ .top_side .solutions h3 { font-size: 7vw; line-height: 7vw; height: auto; padding-bottom: 0px; padding-top: 8px; margin-bottom: 0px }
+ .text_info { width: 90%; margin: 20px auto 0 auto; line-height: 24px }
+ .text_info span { color: #6bd7fd; font-weight: bold; }
+ .faq .faq_flex { width: 100% }
+ .form_side { position: static; width: 90%; margin: auto }
+ .form_side h2 { padding: 0px; width: 100%; margin: 80px auto 20px auto; font-size: 7vw }
+ .faq .faq_flex .ask { line-height: 18px; }
+ .faq { padding: 30px 5% 5% 5% }
+ .faq h2 { text-align: center; padding-top: 20px; font-size: 7.2vw !important }
+ .form_side h2 span { font-weight: normal; font-size: 6vw }
+ .faq .faq_flex .ask:before { right: -4vw }
+ .top_side .advantages span.mobile-only { padding-top: 0px }
+}
